@@ -1,0 +1,356 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Encode Sans", sans-serif;
+    background-color: #eeeeee;
+    overflow-y: auto; /* Garante que a página role verticalmente */
+    min-height: 100vh; /* Garante que o conteúdo ocupe ao menos a altura da tela */
+}
+.Logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #CF2B2B;
+    padding: 10px 0;
+    z-index: 1000;
+}
+.righteous-regular {
+    font-family: "Righteous", sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+    text-align: left; 
+    color: white;
+    text-transform: uppercase; 
+    font-size: 28px; 
+    margin: 0;
+    margin-left: 20px;
+}
+.encode-sans {
+    font-family: "Encode Sans", sans-serif; 
+    font-weight: 300; 
+    font-style: normal;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    margin-left: 20px;
+}
+main {
+    margin-top: 100px; 
+    padding: 20px;
+}
+
+
+.rodape{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 10px 0;
+    
+
+}
+.botao{
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    text-align: center;
+    font-family: "Encode Sans", sans-serif;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    margin: 10px auto;
+    max-width: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    
+}
+
+
+.botao.ativo {
+    background-color: #32cd32; /* Cor verde para botão habilitado */
+    pointer-events: auto; /* Permite cliques */
+    cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+.pedidos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    margin-bottom: 80px; /* Espaço extra para evitar o bloqueio pelo rodapé */
+    gap: 20px; /* Espaçamento entre seções */
+}
+
+.pedidos::-webkit-scrollbar {
+    display: none; 
+}
+
+.escolhasum{
+     display: flex; 
+    overflow-x: auto; 
+    padding: 5px 0; /* Reduz a margem interna para encurtar o espaço */
+    scrollbar-width: none; 
+    gap: 1px;
+    text-align: left;
+    overflow-y: hidden; 
+}
+
+.escolhasum::-webkit-scrollbar {
+    display: none; 
+}
+
+.pedidos img { 
+    width: 144px;
+    height: auto; /* Mantém a proporção */
+    max-height: 87px; /* Define um limite máximo de altura */
+    border-radius: 4px;
+    align-items: center;
+    left: 2px;
+}
+.pratos{
+
+    flex: 0 0 auto;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    background-color: white;
+    margin-left: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+
+}
+
+.pratos p {
+    font-family: "Encode Sans", sans-serif;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin: 0 10px 10px;
+}
+
+.primeiro{
+    font-family: "Encode Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 15px 5px; /* Reduz a margem inferior para diminuir o espaçamento */
+    margin-top: -50px;
+    color: #333;
+}
+
+
+.pratos h3 {
+    font-family: "Encode Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0 5px;
+    text-align: center;
+    color: #333;
+}
+
+.pratos h3:last-child {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.comida{
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente a imagem */
+    text-align: left; /* Alinha os textos à esquerda */
+    gap: -1px; /* Espaço entre os elementos */
+    padding: 10px; /* Espaçamento interno */
+    
+}
+
+
+.comida img {
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+.comida h3,
+.comida p {
+    align-self: flex-start; /* Garante que os textos fiquem alinhados à esquerda */
+}
+
+
+.escolhasum-pudim{
+    display: flex; 
+    overflow-x: auto; 
+    padding: 5px 0; /* Reduz a margem interna para encurtar o espaço */
+    scrollbar-width: none; 
+    gap: 1px;
+    text-align: left;
+}
+
+.escolhasum-pudim::-webkit-scrollbar {
+    display: none; 
+}
+
+
+.primeiro-pudim{
+    font-family: "Encode Sans", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 15px 5px; /* Reduz a margem inferior para diminuir o espaçamento */
+    margin-top: 20px;
+    color: #333;
+}
+
+
+.pratos.selecionado {
+    border: 2px solid #32cd32; /* Exemplo: borda verde */
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.5); /* Realce ao redor */
+    transform: scale(1.05); /* Leve aumento de tamanho */
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.botao-modal {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#confirmar-pedido {
+    background:white;
+    color: white;
+
+}
+
+#confirmar-pedido p{
+    color: #50D074;
+}
+
+#cancelar-pedido {
+    color: white;
+}
+
+
+/* Estilos para a confirmação */
+.confirmacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; /* Fica escondido até ser ativado */
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.confirmacao-conteudo {
+    background-color: #50D074;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.confirmacao h3 {
+    font-family: "Encode Sans", sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#itens-pedido p {
+    font-family: "Encode Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+#total-pedido {
+    font-family: "Encode Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Estilo para o botão de confirmação */
+.botao-confirmar {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: white;
+    color: white;
+    font-family: "Encode Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao-confirmar:hover {
+    background-color: white;
+    color: white;
+}
+
+/* Estilo para o botão de cancelar */
+.botao-cancelar {
+    padding: 12px 20px;
+    background-color: transparent;
+    font-family: "Encode Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.botao-cancelar:hover {
+    background-color: #f0f0f0;
+}
+

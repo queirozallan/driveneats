@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Driven.eats</title>
+        <link rel="stylesheet" href="stylo.css">
+
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=Righteous&display=swap" rel="stylesheet">
+   
+    </head>
+    <body>
+        <header class="Logo">
+            <h1 class="righteous-regular">DrivenEats</h1>
+            <p class="encode-sans">Sua comida em 6 minutos</p>
+        </header>
+        <div class="pedidos">
+            <h2 class="primeiro">Primeiro, seu prato</h2>
+            <Div class="escolhasum" id="pratos">
+                <div class="pratos" onclick="selecionarItem(this)">
+                    <div class="comida">
+                        <img src="pratoprincipal.png" alt="pratoprincipal">
+                        <h3>Frango Yin Yang</h3>
+                        <p>Um pouco de batata,<br> um pouco de salada</p>
+                        <h3>14.90</h3>
+                    </div>
+                </div>
+
+                <div class="pratos" onclick="selecionarItem(this)">
+                    <div class="comida" >
+                        <img src="pratoprincipal.png" alt="pratoprincipal">
+                        <h3>Frango Yin Yang</h3>
+                        <p>Um pouco de batata,<br> um pouco de salada</p>
+                        <h3>14.90</h3>
+                    </div>
+                </div>
+
+                <div class="pratos" onclick="selecionarItem(this)">
+                    <div class="comida">
+                        <img src="pratoprincipal.png" alt="pratoprincipal">
+                        <h3>Frango Yin Yang</h3>
+                        <p>Um pouco de batata,<br> um pouco de salada</p>
+                        <h3>14.90</h3>
+                    </div>
+                </div>
+            </Div>
+         </div>
+         <h2 class="primeiro">Agora, sua bebida</h2>
+         <Div class="escolhasum" id="bebidas">   
+            <div class="pratos" onclick="selecionarItem(this)">
+                <div class="comida">
+                    <img src="coquinhagelada.png" alt="coca">
+                    <h3>Coquinha gelada</h3>
+                    <p>Lata 350ml</p>
+                    <h3>4.90</h3>
+                </div>
+            </div>
+            <div class="pratos" onclick="selecionarItem(this)">
+                <div class="comida">
+                    <img src="coquinhagelada.png" alt="coca">
+                    <h3>Coquinha gelada</h3>
+                    <p>Lata 350ml</p>
+                    <h3>4.90</h3>
+                </div>
+            </div>
+            <div class="pratos" onclick="selecionarItem(this)">
+                <div class="comida">
+                    <img src="coquinhagelada.png" alt="coca">
+                    <h3>Coquinha gelada</h3>
+                    <p>Lata 350ml</p>
+                    <h3>4.90</h3>
+                </div>
+            </div>
+         </Div>
+         <h2 class="primeiro-pudim">Por fim, sua sobremesa</h2>
+         <Div class="escolhasum-pudim" id="sobremesas">   
+            <div class="pratos" onclick="selecionarItem(this)">
+                <div class="comida">
+                    <img src="pudim.png" alt="pudim">
+                    <h3>Pudim</h3>
+                    <p>Apenas pudim</p>
+                    <h3>7.90</h3>
+                </div>
+            </div>
+            <div class="pratos" onclick="selecionarItem(this)">
+                <div class="comida">
+                    <img src="pudim.png" alt="pudim">
+                    <h3>Pudim</h3>
+                    <p>Apenas pudim</p>
+                    <h3>7.90</h3>
+                </div>
+            </div>
+            <div class="pratos" onclick="selecionarItem(this)">
+                <div class="comida">
+                    <img src="pudim.png" alt="pudim">
+                    <h3>Pudim</h3>
+                    <p>Apenas pudim</p>
+                    <h3>7.90</h3>
+                </div>
+            </div>
+         </Div>
+        </div>
+
+
+        <!-- Janela de confirmação -->
+        <div id="confirmacao" class="confirmacao">
+            <div class="confirmacao-conteudo">
+                <h3>Confirme seu pedido</h3>
+                <div id="itens-pedido"></div>
+                <div id="total-pedido"></div>
+                <a href="#" id="confirmar-pedido" class="botao-confirmar"><P>Tudo certo, pode pedir!</P></a>
+                <button id="cancelar-pedido" class="botao-cancelar">Cancelar</button>
+            </div>
+        </div>
+        
+
+       
+
+        <div class="rodape">
+            <div class="botao">
+                <p>Selecione os 3 itens<br>
+                    para fechar o pedido</p>
+            </div>
+        </div>
+        <script src="script.js" defer></script>
+    </body>
+</html>
